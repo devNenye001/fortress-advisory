@@ -5,11 +5,6 @@ import Footer from './components/Footer'
 import PageTransition from './components/PageTransition'
 
 import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import ServicesPage from './pages/ServicesPage'
-import ProgrammesPage from './pages/ProgrammesPage'
-import BlogPage from './pages/BlogPage'
-import ContactPage from './pages/ContactPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 function AnimatedAppRoutes() {
@@ -19,13 +14,7 @@ function AnimatedAppRoutes() {
     <PageTransition>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/programmes" element={<ProgrammesPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        {/* 404 Catch-All & Direct Route */}
-        <Route path="/404" element={<NotFoundPage />} />
+        {/* All other routes show 404 Not Found since design is not yet provided */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </PageTransition>

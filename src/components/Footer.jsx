@@ -20,13 +20,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14">
           
-          {/* Column 1: Brand & Tagline */}
+          {/* Column 1: Brand & Tagline - Logo increased by 50px */}
           <div className="lg:col-span-4 space-y-4">
             <Link to="/" className="inline-block">
               <img 
                 src="/logo.png" 
                 alt="Fortress Advisory" 
-                className="h-11 sm:h-12 w-auto object-contain"
+                className="h-[92px] sm:h-[98px] w-auto object-contain"
               />
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed max-w-xs font-normal">
@@ -36,7 +36,7 @@ export default function Footer() {
 
           {/* Column 2: Explore */}
           <div className="lg:col-span-2">
-            <h3 className="text-gray-900 font-semibold text-base mb-4 tracking-normal">
+            <h3 className="font-serif text-gray-900 font-bold text-base mb-4 tracking-normal">
               Explore
             </h3>
             <ul className="space-y-3 text-sm">
@@ -60,7 +60,7 @@ export default function Footer() {
 
           {/* Column 3: Support */}
           <div className="lg:col-span-2">
-            <h3 className="text-gray-900 font-semibold text-base mb-4 tracking-normal">
+            <h3 className="font-serif text-gray-900 font-bold text-base mb-4 tracking-normal">
               Support
             </h3>
             <ul className="space-y-3 text-sm">
@@ -75,7 +75,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/about#reviews" className="text-gray-600 hover:text-[#032543] transition-colors">
+                <Link to="/reviews" className="text-gray-600 hover:text-[#032543] transition-colors">
                   Reviews
                 </Link>
               </li>
@@ -84,10 +84,10 @@ export default function Footer() {
 
           {/* Column 4: Stay Connected */}
           <div className="lg:col-span-4">
-            <h3 className="text-gray-900 font-semibold text-base mb-3 tracking-normal">
+            <h3 className="font-serif text-gray-900 font-bold text-base mb-3 tracking-normal">
               Stay Connected
             </h3>
-            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-5">
               Receive occasional insights, practical perspectives and updates from Fortress Advisory on governance, ethics, fraud risk management and responsible leadership.
             </p>
 
@@ -102,13 +102,13 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
                   required
-                  className="w-full pl-10 pr-4 py-2.5 bg-[#f4f5f7] text-gray-800 text-sm rounded-full border-0 focus:outline-none focus:ring-1 focus:ring-[#032543] transition-colors"
+                  className="w-full pl-10 pr-4 py-3 bg-[#f8f9fa] text-gray-800 text-sm rounded-full border-0 focus:outline-none focus:ring-1 focus:ring-[#032543] transition-colors"
                 />
               </div>
 
               <button
                 type="submit"
-                className="bg-[#032543] text-white text-sm font-medium px-7 py-2.5 rounded-full hover:bg-[#021b31] transition-colors shrink-0"
+                className="bg-[#032543] text-white text-sm font-medium px-8 py-3 rounded-full hover:bg-[#021b31] transition-colors shrink-0"
               >
                 Subscribe
               </button>
