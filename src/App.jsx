@@ -1,11 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import PageTransition from './components/PageTransition'
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
+import PageTransition from './components/PageTransition/PageTransition'
+import './App.css'
 
-import HomePage from './pages/HomePage'
-import NotFoundPage from './pages/NotFoundPage'
+import Home from './pages/Home/Home'
+import About from './pages/About/About'
+import NotFound from './pages/NotFound/NotFound'
 
 function AnimatedAppRoutes() {
   const location = useLocation()
@@ -13,9 +15,10 @@ function AnimatedAppRoutes() {
   return (
     <PageTransition>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         {/* All other routes show 404 Not Found since design is not yet provided */}
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </PageTransition>
   )
@@ -24,9 +27,9 @@ function AnimatedAppRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col bg-white text-gray-800">
+      <div className="app-container">
         <Navbar />
-        <main className="flex-1">
+        <main className="app-main">
           <AnimatedAppRoutes />
         </main>
         <Footer />
