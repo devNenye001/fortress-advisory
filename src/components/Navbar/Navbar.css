@@ -64,7 +64,7 @@
 
 .navbar__link {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -106,7 +106,7 @@
   padding: 12px 32px;
   border-radius: 9999px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -196,7 +196,7 @@
   text-align: center;
   padding: 12px;
   border-radius: 9999px;
-  font-size: 15px;
+  font-size: 16px;
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   text-decoration: none;

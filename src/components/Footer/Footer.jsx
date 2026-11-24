@@ -49,13 +49,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/programmes" className="footer__link">
-                  Programmes
+                <Link to="/about" className="footer__link">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="footer__link">
-                  About Us
+                <Link to="/faqs" className="footer__link">
+                  FAQs
                 </Link>
               </li>
             </ul>

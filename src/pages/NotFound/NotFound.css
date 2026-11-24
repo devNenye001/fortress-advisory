@@ -67,7 +67,7 @@
 
 .not-found__text {
   font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.65;
   color: #475569;
   font-weight: 400;
@@ -77,7 +77,7 @@
 
 @media (min-width: 640px) {
   .not-found__text {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
@@ -90,7 +90,7 @@
   border-radius: 9999px;
   padding: 13px 32px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   text-decoration: none;
   transition: all 0.2s ease;

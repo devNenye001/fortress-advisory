@@ -6,7 +6,12 @@ import './Navbar.css'
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
-  const isTransparent = location.pathname === '/' || location.pathname === '/about'
+  const isTransparent = 
+    location.pathname === '/' || 
+    location.pathname === '/about' || 
+    location.pathname.startsWith('/services') || 
+    location.pathname.startsWith('/service') ||
+    location.pathname.startsWith('/blog')
 
   const navLinks = [
     { name: 'Home', path: '/' },

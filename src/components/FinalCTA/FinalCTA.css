@@ -60,7 +60,7 @@
 
 .final-cta__text {
   font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.95);
   max-width: 700px;
@@ -70,7 +70,7 @@
 
 @media (min-width: 640px) {
   .final-cta__text {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
@@ -83,7 +83,7 @@
   border-radius: 9999px;
   padding: 14px 34px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease;

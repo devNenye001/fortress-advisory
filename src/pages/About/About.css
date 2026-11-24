@@ -382,7 +382,7 @@
 
 .about-services__col-title {
   font-family: 'Kameron', Georgia, serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: -0.04em;
   color: #032543;
@@ -392,7 +392,7 @@
 
 .about-services__col-text {
   font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.65;
   color: #64748b;
   font-weight: 400;
@@ -412,9 +412,9 @@
   background-color: #032543;
   color: #ffffff;
   border-radius: 9999px;
-  padding: 12px 32px;
+  padding: 13px 34px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -508,7 +508,7 @@
 
 .about-values__label {
   font-family: 'Kameron', Georgia, serif;
-  font-size: 14.5px;
+  font-size: 16px;
   color: #032543;
   font-weight: 400;
   letter-spacing: -0.04em;
@@ -566,7 +566,7 @@
 
 .about-values__col-title {
   font-family: 'Kameron', Georgia, serif;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: -0.04em;
   color: #111827;
@@ -575,7 +575,7 @@
 
 .about-values__col-text {
   font-family: 'DM Sans', sans-serif;
-  font-size: 13.5px;
+  font-size: 16px;
   line-height: 1.6;
   color: #64748b;
   font-weight: 400;
@@ -642,7 +642,7 @@
 
 .about-industries__label {
   font-family: 'Kameron', Georgia, serif;
-  font-size: 14.5px;
+  font-size: 16px;
   color: #032543;
   font-weight: 400;
   letter-spacing: -0.04em;
@@ -680,14 +680,14 @@
   align-items: center;
   gap: 12px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 14.5px;
+  font-size: 16px;
   color: #111827;
   font-weight: 400;
 }
 
 .about-industries__bullet {
   color: #C8A84E;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1;
   flex-shrink: 0;
@@ -782,7 +782,7 @@
 
 .about-profile__role {
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #64748b;
   font-weight: 400;
   margin: 0 0 20px;
@@ -797,7 +797,7 @@
 
 .about-profile__bio p {
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   color: #475569;
   font-weight: 400;
