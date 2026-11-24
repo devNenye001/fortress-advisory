@@ -72,11 +72,24 @@ export default function About() {
               className="about-hero__right"
             >
               <p className="about-hero__text">
-                Fortress Advisory is an independent advisory firm dedicated to helping organisations navigate complex ethical, governance and fraud-related challenges.
+                Whether your organisation needs support with an investigation, governance improvement, fraud risk or leadership development, Fortress Advisory is ready to start a conversation.
               </p>
             </motion.div>
 
           </div>
+        </div>
+
+        {/* Bottom angled bend */}
+        <div className="about-hero__bend-wrap">
+          <svg 
+            className="about-hero__bend" 
+            viewBox="0 0 1440 48" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+          >
+            <polygon points="0,48 396,48 499,0 1440,0 1440,48 0,48" fill="#ffffff" />
+          </svg>
         </div>
       </section>
 

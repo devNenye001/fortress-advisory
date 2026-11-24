@@ -42,17 +42,18 @@
 
 .about-hero__container {
   position: relative;
+  z-index: 10;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 100px 24px 54px;
+  padding: 100px 24px 64px;
   color: #ffffff;
   box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
   .about-hero__container {
-    padding: 120px 48px 60px;
+    padding: 120px 48px 76px;
   }
 }
 
@@ -100,7 +101,7 @@
 
 .about-hero__text {
   font-family: 'DM Sans', sans-serif;
-  font-size: 14.5px;
+  font-size: 16px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.95);
   font-weight: 400;
@@ -110,8 +111,34 @@
 
 @media (min-width: 640px) {
   .about-hero__text {
-    font-size: 15.5px;
+    font-size: 17px;
   }
+}
+
+/* Hero Bottom Angled Bend */
+.about-hero__bend-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 36px;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+  line-height: 0;
+}
+
+@media (min-width: 768px) {
+  .about-hero__bend-wrap {
+    height: 48px;
+  }
+}
+
+.about-hero__bend {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 
@@ -156,7 +183,7 @@
 
 .about-who__label {
   font-family: 'Kameron', Georgia, serif;
-  font-size: 15px;
+  font-size: 16px;
   color: #032543;
   font-weight: 400;
   letter-spacing: -0.04em;
@@ -196,26 +223,25 @@
 
 .about-who__text {
   font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   color: #475569;
   font-weight: 400;
   margin: 0;
 }
 
-/* Mission & Focus Pillars */
+/* Mission & Vision Pillars */
 .about-who__pillars {
   display: grid;
   grid-template-columns: 1fr;
   gap: 36px;
-  padding-top: 24px;
-  border-top: 1px solid #f1f5f9;
+  padding-top: 8px;
 }
 
 @media (min-width: 768px) {
   .about-who__pillars {
     grid-template-columns: 1fr 1fr;
-    gap: 56px;
+    gap: 64px;
   }
 }
 
@@ -241,16 +267,20 @@
 
 .about-pillar__title {
   font-family: 'Kameron', Georgia, serif;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: -0.04em;
   color: #111827;
   margin: 0;
 }
 
+.about-pillar__highlight {
+  color: #032543;
+}
+
 .about-pillar__text {
   font-family: 'DM Sans', sans-serif;
-  font-size: 13.5px;
+  font-size: 16px;
   line-height: 1.6;
   color: #64748b;
   font-weight: 400;
@@ -285,7 +315,7 @@
 
 .about-services__label {
   font-family: 'Kameron', Georgia, serif;
-  font-size: 14.5px;
+  font-size: 16px;
   color: #032543;
   font-weight: 400;
   letter-spacing: -0.04em;
@@ -802,12 +832,12 @@
 .about-training {
   background-color: #032543;
   color: #ffffff;
-  padding: 26px 20px;
+  padding: 36px 20px;
 }
 
 @media (min-width: 1024px) {
   .about-training {
-    padding: 30px 48px;
+    padding: 44px 48px;
   }
 }
 
@@ -819,15 +849,15 @@
 .about-training__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
-  align-items: center;
+  gap: 32px;
+  align-items: flex-start;
 }
 
 @media (min-width: 1024px) {
   .about-training__grid {
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1fr 1fr;
     gap: 48px;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -840,27 +870,27 @@
 
 .about-training__label {
   font-family: 'Kameron', Georgia, serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #C8A84E;
   letter-spacing: -0.04em;
-  margin: 0 0 8px;
+  margin: 0 0 20px;
   display: inline-block;
 }
 
 .about-training__title {
   font-family: 'Kameron', Georgia, serif;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 400;
-  line-height: 1.22;
+  line-height: 1.25;
   letter-spacing: -0.04em;
   color: #ffffff;
-  margin: 0 0 12px;
+  margin: 0 0 20px;
 }
 
 @media (min-width: 640px) {
   .about-training__title {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
 
@@ -872,10 +902,10 @@
 
 .about-training__subtitle {
   font-family: 'DM Sans', sans-serif;
-  font-size: 13.5px;
+  font-size: 17px;
   color: #ffffff;
   font-weight: 400;
-  margin: 0 0 8px;
+  margin: 0 0 20px;
 }
 
 .about-training__list {
@@ -884,22 +914,22 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
 }
 
 .about-training__item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 13.5px;
+  font-size: 17px;
   color: #ffffff;
   font-weight: 400;
 }
 
 .about-training__bullet {
   color: #C8A84E;
-  font-size: 13.5px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 1;
   flex-shrink: 0;
@@ -913,8 +943,9 @@
 
 .about-training__img-wrap {
   width: 100%;
-  max-width: 430px;
-  aspect-ratio: 1.38 / 1;
+  max-width: 480px;
+  aspect-ratio: 1.19 / 1;
+  max-height: 390px;
   overflow: hidden;
 }
 
