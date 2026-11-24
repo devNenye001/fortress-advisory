@@ -141,7 +141,7 @@ export default function Blog() {
               className="blog-hero__right"
             >
               <p className="blog-hero__text">
-                Explore our perspectives, practical guidance and discussions on the issues shaping organisational integrity, governance, fraud risk management and responsible leadership.
+                Explore expert perspectives, practical guidance and discussions on the issues shaping organisational integrity, governance, fraud risk management and responsible leadership.
               </p>
             </motion.div>
 

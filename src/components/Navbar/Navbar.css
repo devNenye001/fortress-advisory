@@ -42,6 +42,15 @@
   width: auto;
   object-fit: contain;
   display: block;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.navbar--home .navbar__logo {
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
+}
+
+.navbar--solid .navbar__logo {
+  filter: none;
 }
 
 @media (min-width: 640px) {

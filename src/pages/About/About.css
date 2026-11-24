@@ -16,28 +16,58 @@
 .about-hero {
   position: relative;
   width: 100%;
-  min-height: 520px;
-  height: 65vh;
-  max-height: 640px;
+  min-height: 340px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   background-color: #032543;
   overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 56px;
+}
+
+@media (min-width: 640px) {
+  .about-hero {
+    min-height: 380px;
+    padding-top: 110px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-hero {
+    min-height: 400px;
+    padding-top: 120px;
+    padding-bottom: 72px;
+  }
 }
 
 .about-hero__bg {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 35%;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .about-hero__overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.32);
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.1) 45%,
+      rgba(0, 0, 0, 0.35) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(3, 37, 67, 0.65) 0%,
+      rgba(3, 37, 67, 0.45) 50%,
+      rgba(3, 37, 67, 0.60) 100%
+    );
+  z-index: 2;
 }
 
 .about-hero__container {
@@ -46,27 +76,29 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 100px 24px 64px;
+  padding: 0 24px;
   color: #ffffff;
   box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
   .about-hero__container {
-    padding: 120px 48px 76px;
+    padding: 0 48px;
   }
 }
 
 .about-hero__grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 @media (min-width: 768px) {
   .about-hero__grid {
-    grid-template-columns: 5fr 7fr;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
     gap: 48px;
   }
 }
@@ -118,7 +150,7 @@
 /* Hero Bottom Angled Bend */
 .about-hero__bend-wrap {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   right: 0;
   width: 100%;

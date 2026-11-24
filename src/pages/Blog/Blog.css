@@ -11,27 +11,29 @@
    -------------------------------------------------------------------------- */
 .blog-hero {
   position: relative;
-  min-height: 380px;
+  min-height: 340px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #0c121d;
   overflow: hidden;
   padding-top: 100px;
-  padding-bottom: 72px;
+  padding-bottom: 56px;
 }
 
 @media (min-width: 640px) {
   .blog-hero {
-    min-height: 440px;
-    padding-top: 120px;
-    padding-bottom: 84px;
+    min-height: 380px;
+    padding-top: 110px;
+    padding-bottom: 64px;
   }
 }
 
 @media (min-width: 1024px) {
   .blog-hero {
-    min-height: 480px;
-    padding-top: 140px;
-    padding-bottom: 96px;
+    min-height: 400px;
+    padding-top: 120px;
+    padding-bottom: 72px;
   }
 }
 
@@ -39,7 +41,7 @@
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: center 68%;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -47,17 +49,26 @@
 .blog-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(3, 37, 67, 0.78) 0%,
-    rgba(3, 37, 67, 0.65) 50%,
-    rgba(3, 37, 67, 0.72) 100%
-  );
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.62) 0%,
+      rgba(0, 0, 0, 0.15) 45%,
+      rgba(0, 0, 0, 0.38) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.62) 0%,
+      rgba(0, 0, 0, 0.12) 35%,
+      rgba(0, 0, 0, 0.22) 65%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  z-index: 2;
 }
 
 .blog-hero__container {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
@@ -133,7 +144,7 @@
 /* Hero Bottom Angled Bend Signature */
 .blog-hero__bend-wrap {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   right: 0;
   width: 100%;

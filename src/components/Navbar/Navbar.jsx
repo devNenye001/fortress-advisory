@@ -11,7 +11,7 @@ export default function Navbar() {
     location.pathname === '/about' || 
     location.pathname.startsWith('/services') || 
     location.pathname.startsWith('/service') ||
-    location.pathname.startsWith('/blog')
+    location.pathname === '/blog'
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -27,7 +27,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="navbar__logo-link">
           <img 
-            src="/logo.png" 
+            src={isTransparent ? "/logo-light.png" : "/logo.png"} 
             alt="Fortress Advisory" 
             className="navbar__logo"
           />

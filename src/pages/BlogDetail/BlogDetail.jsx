@@ -5,10 +5,7 @@ import {
   Clock, 
   Heart, 
   ChevronRight, 
-  ArrowRight, 
-  ChevronLeft,
-  Share2,
-  Check
+  ChevronLeft 
 } from 'lucide-react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import FinalCTA from '../../components/FinalCTA/FinalCTA'
@@ -23,18 +20,7 @@ const fadeInUp = {
   }
 }
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.08,
-    }
-  }
-}
-
-// Explore more articles dataset
+// Explore more articles dataset matching the design mockup exactly
 const moreArticlesData = [
   {
     id: 1,
@@ -58,7 +44,7 @@ const moreArticlesData = [
     category: 'Ethics & Integrity',
     title: 'Ethics & Integrity',
     desc: 'Building ethical standards, trust and integrity into everyday business decisions.',
-    image: '/service7.jpg',
+    image: '/why3.jpg',
   },
   {
     id: 4,
@@ -82,7 +68,6 @@ export default function BlogDetail() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const [liked, setLiked] = useState(false)
-  const [copied, setCopied] = useState(false)
   const sliderRef = useRef(null)
 
   // Scroll reading progress bar
@@ -115,12 +100,6 @@ export default function BlogDetail() {
     }
   }
 
-  const handleShare = () => {
-    navigator.clipboard?.writeText(window.location.href)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
   return (
     <div className="blog-detail-page">
       {/* Scroll Reading Progress Bar */}
@@ -136,22 +115,22 @@ export default function BlogDetail() {
               1. BREADCRUMBS
               ---------------------------------------------------------------- */}
           <motion.nav 
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             className="blog-detail__breadcrumbs"
             aria-label="Breadcrumbs"
           >
             <Link to="/" className="blog-detail__crumb">Home</Link>
-            <ChevronRight size={14} className="blog-detail__crumb-sep" />
+            <span className="blog-detail__crumb-sep">&gt;</span>
             <Link to="/blog" className="blog-detail__crumb">Blog</Link>
-            <ChevronRight size={14} className="blog-detail__crumb-sep" />
+            <span className="blog-detail__crumb-sep">&gt;</span>
             <span className="blog-detail__crumb blog-detail__crumb--active">Ethics &amp; Integrity</span>
           </motion.nav>
 
 
           {/* ----------------------------------------------------------------
-              2. ARTICLE TITLE
+              2. ARTICLE TITLE & META ROW
               ---------------------------------------------------------------- */}
           <motion.header
             initial={{ opacity: 0, y: 16 }}
@@ -163,10 +142,10 @@ export default function BlogDetail() {
               Building a Culture of Integrity: Why Ethical Leadership Matters in Every Organisation
             </h1>
 
-            {/* Meta Tags & Action Row */}
+            {/* Meta Tags & Heart Action */}
             <div className="blog-detail__meta-row">
               <div className="blog-detail__badges">
-                <span className="blog-detail__badge blog-detail__badge--cat">
+                <span className="blog-detail__badge">
                   Ethics &amp; Integrity
                 </span>
 
@@ -181,27 +160,20 @@ export default function BlogDetail() {
                 </span>
               </div>
 
-              <div className="blog-detail__actions">
-                <button 
-                  type="button"
-                  onClick={() => setLiked(!liked)}
-                  className={`blog-detail__icon-btn ${liked ? 'blog-detail__icon-btn--liked' : ''}`}
-                  aria-label="Like article"
-                  title="Like article"
-                >
-                  <Heart size={18} fill={liked ? '#ef4444' : 'none'} color={liked ? '#ef4444' : '#64748b'} />
-                </button>
-
-                <button 
-                  type="button"
-                  onClick={handleShare}
-                  className="blog-detail__icon-btn"
-                  aria-label="Share article link"
-                  title="Copy article link"
-                >
-                  {copied ? <Check size={18} color="#10b981" /> : <Share2 size={18} color="#64748b" />}
-                </button>
-              </div>
+              <motion.button 
+                type="button"
+                onClick={() => setLiked(!liked)}
+                whileTap={{ scale: 0.85 }}
+                className={`blog-detail__heart-btn ${liked ? 'blog-detail__heart-btn--liked' : ''}`}
+                aria-label={liked ? "Unlike article" : "Like article"}
+                title={liked ? "Unlike article" : "Like article"}
+              >
+                <Heart 
+                  size={18} 
+                  fill={liked ? '#ef4444' : 'none'} 
+                  color={liked ? '#ef4444' : '#64748b'} 
+                />
+              </motion.button>
             </div>
           </motion.header>
 
@@ -217,7 +189,7 @@ export default function BlogDetail() {
           >
             <img 
               src="/service5.jpg" 
-              alt="Building a Culture of Integrity" 
+              alt="Building a Culture of Integrity: Why Ethical Leadership Matters in Every Organisation" 
               className="blog-detail__cover-img"
             />
           </motion.div>
@@ -236,8 +208,8 @@ export default function BlogDetail() {
               variants={fadeInUp}
               className="blog-detail__content"
             >
-              {/* Lead Paragraph */}
-              <p className="blog-detail__lead">
+              {/* Lead Paragraphs */}
+              <p className="blog-detail__p">
                 Organisational integrity is built through the decisions leaders make, the standards they uphold and the behaviour they encourage across the workplace. While policies and procedures provide guidance, it is leadership that brings those values to life.
               </p>
               <p className="blog-detail__p">
@@ -261,28 +233,28 @@ export default function BlogDetail() {
               </h2>
               <div className="blog-detail__points">
                 <div className="blog-detail__point">
-                  <h3 className="blog-detail__h3">1. Builds Trust Across the Organisation</h3>
+                  <h3 className="blog-detail__point-title">1. Builds Trust Across the Organisation</h3>
                   <p className="blog-detail__p">
                     Employees are more likely to trust leadership when decisions are transparent, expectations are clear and people are treated fairly.
                   </p>
                 </div>
 
                 <div className="blog-detail__point">
-                  <h3 className="blog-detail__h3">2. Strengthens Accountability</h3>
+                  <h3 className="blog-detail__point-title">2. Strengthens Accountability</h3>
                   <p className="blog-detail__p">
                     Ethical leadership encourages individuals at every level to take responsibility for their actions and decisions.
                   </p>
                 </div>
 
                 <div className="blog-detail__point">
-                  <h3 className="blog-detail__h3">3. Promotes a Positive Workplace Culture</h3>
+                  <h3 className="blog-detail__point-title">3. Promotes a Positive Workplace Culture</h3>
                   <p className="blog-detail__p">
                     When leaders demonstrate respect, fairness and integrity, these behaviours become part of the organisation's wider culture.
                   </p>
                 </div>
 
                 <div className="blog-detail__point">
-                  <h3 className="blog-detail__h3">4. Supports Better Decision-Making</h3>
+                  <h3 className="blog-detail__point-title">4. Supports Better Decision-Making</h3>
                   <p className="blog-detail__p">
                     Clear ethical standards help leaders and employees navigate difficult situations and make responsible choices.
                   </p>
@@ -332,12 +304,11 @@ export default function BlogDetail() {
 
               {/* Conversation Callout */}
               <div className="blog-detail__callout">
-                <p className="blog-detail__callout-text">
+                <p className="blog-detail__callout-p">
                   Need support strengthening ethical practices in your organisation?
                 </p>
                 <Link to="/contact" className="blog-detail__callout-link">
-                  <span>Let's start a conversation.</span>
-                  <ArrowRight size={16} />
+                  Let's start a conversation.
                 </Link>
               </div>
 
@@ -345,7 +316,7 @@ export default function BlogDetail() {
 
             {/* Right Sticky Sidebar */}
             <aside className="blog-detail__sidebar">
-              <div className="blog-detail__sidebar-card">
+              <div className="blog-detail__sidebar-inner">
                 <h3 className="blog-detail__sidebar-title">
                   Follow us
                 </h3>
@@ -353,14 +324,14 @@ export default function BlogDetail() {
                   Get the latest articles and insights.
                 </p>
 
-                {/* Social Links */}
+                {/* Social Links matching mockup */}
                 <div className="blog-detail__socials">
                   {/* Facebook */}
                   <a 
                     href="https://facebook.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="blog-detail__social-icon"
+                    className="blog-detail__social-link"
                     aria-label="Follow Fortress Advisory on Facebook"
                   >
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
@@ -373,7 +344,7 @@ export default function BlogDetail() {
                     href="https://instagram.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="blog-detail__social-icon"
+                    className="blog-detail__social-link"
                     aria-label="Follow Fortress Advisory on Instagram"
                   >
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
@@ -386,24 +357,11 @@ export default function BlogDetail() {
                     href="https://twitter.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="blog-detail__social-icon"
+                    className="blog-detail__social-link"
                     aria-label="Follow Fortress Advisory on X"
                   >
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                  </a>
-
-                  {/* LinkedIn */}
-                  <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="blog-detail__social-icon"
-                    aria-label="Follow Fortress Advisory on LinkedIn"
-                  >
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
                   </a>
                 </div>
@@ -492,4 +450,3 @@ export default function BlogDetail() {
     </div>
   )
 }
-
